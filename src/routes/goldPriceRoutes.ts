@@ -4,8 +4,8 @@ import { verifyToken } from '../middleware/veryfiToken';
 import { authorize } from '../middleware/authorize';
 const router = express.Router();
 
-router.get('/', verifyToken, authorize('user'), getGoldPrice);
+router.get('/', verifyToken, authorize( 'user', 'admin'), getGoldPrice);
 router.post('/', verifyToken, authorize('admin'), createGoldPrice);
-router.patch('/:id', verifyToken, authorize('user'), updateGoldPrice);
+router.patch('/:id', verifyToken, authorize('admin'), updateGoldPrice);
 
 export default router;
