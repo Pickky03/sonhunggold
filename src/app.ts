@@ -11,7 +11,7 @@ connectDB();
 const app = express();
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://sonhunggold-frontend.vercel.app', // thêm frontend thật nếu deploy
+  'https://www.sonhung.name.vn', // thêm frontend thật nếu deploy
 ];
 
 app.use(cors({
