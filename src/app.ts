@@ -9,13 +9,10 @@ import cors from 'cors';
 dotenv.config();
 connectDB();
 const app = express();
-const allowedOrigins = [
-  'http://localhost:3000',
-  'https://www.sonhung.name.vn', // thêm frontend thật nếu deploy
-];
+
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: true,
   credentials: true,
 }));
 
