@@ -10,7 +10,7 @@ dotenv.config();
 connectDB();
 const app = express();
 
-
+//configure cors
 app.use(cors({
   origin: true,
   credentials: true,
