@@ -13,7 +13,7 @@ const app = express();
 //configure cors
 app.use(cors({
   origin: true,
-  credentials: true,
+  credentials: false,
 }));
 app.use((req, res, next) => {
   console.log(`📦 [GLOBAL LOGGER] ${req.method} ${req.originalUrl}`);
