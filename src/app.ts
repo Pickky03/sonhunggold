@@ -12,8 +12,8 @@ const app = express();
 
 //configure cors
 app.use(cors({
-  origin: true,
-  credentials: true,
+  origin: "*", // cho phép frontend kết nối
+  credentials: false,
 }));
 app.use((req, res, next) => {
   console.log(`📦 [GLOBAL LOGGER] ${req.method} ${req.originalUrl}`);
