@@ -9,9 +9,11 @@ const server = http.createServer(app);
 
 // Khởi tạo Socket.IO
 const io = new Server(server, {
+   path: '/socket.io',
   cors: {
     origin: "https://sonhung.name.vn", // cho phép frontend kết nối
-    methods: ["GET", "POST", "PATCH"]
+    methods: ["GET", "POST", "PATCH"],
+    credentials: true,
   }
 });
 
@@ -30,4 +32,5 @@ io.on('connection', (socket) => {
 // ✅ Quan trọng: dùng server.listen chứ không phải app.listen
 server.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);
+   console.log(`🔗 Listening socket path: /socket.io`);
 });
