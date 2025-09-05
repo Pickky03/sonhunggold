@@ -11,9 +11,8 @@ const server = http.createServer(app);
 const io = new Server(server, {
    path: '/socket.io',
   cors: {
-    origin: "https://sonhung.name.vn", // cho phép frontend kết nối
+    origin: "*", // cho phép frontend kết nối
     methods: ["GET", "POST", "PATCH"],
-    credentials: true,
   }
 });
 
