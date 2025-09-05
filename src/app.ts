@@ -15,6 +15,10 @@ app.use(cors({
   origin: true,
   credentials: true,
 }));
+app.use((req, res, next) => {
+  console.log(`📦 [GLOBAL LOGGER] ${req.method} ${req.originalUrl}`);
+  next();
+});
 
 app.use(express.json());
 app.use('/api/users', userRoutes);

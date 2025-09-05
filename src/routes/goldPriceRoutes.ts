@@ -6,6 +6,6 @@ const router = express.Router();
 
 router.get('/', getGoldPrice);
 router.post('/', verifyToken, authorize('admin'), createGoldPrice);
-router.patch('/:id', verifyToken, authorize('admin'), updateGoldPrice);
+router.patch('/:id', updateGoldPrice);
 
 export default router;
