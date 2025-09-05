@@ -24,4 +24,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/goldPrice', goldPriceRoutes);
 app.use('/api/auth', authRoutes);
+app.get('/socket-test', (req, res) => {
+  res.send('🟢 Socket backend đang chạy');
+});
 export default app; 
