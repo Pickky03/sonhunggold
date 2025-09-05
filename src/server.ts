@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // Khởi tạo Socket.IO
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // cho phép frontend kết nối
+    origin: "https://sonhung.name.vn", // cho phép frontend kết nối
     methods: ["GET", "POST", "PATCH"]
   }
 });
