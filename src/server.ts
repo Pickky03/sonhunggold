@@ -13,7 +13,7 @@ const io = new Server(server, {
   cors: {
     origin: "*", // cho phép frontend kết nối
     methods: ["GET", "POST", "PATCH"],
-    credentials: false
+    credentials: true
   }
 });
 

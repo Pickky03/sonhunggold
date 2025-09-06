@@ -12,8 +12,8 @@ const app = express();
 
 //configure cors
 app.use(cors({
-  origin: "*", // cho phép frontend kết nối
-  credentials: false,
+  origin: true, // cho phép frontend kết nối
+  credentials: true,
 }));
 app.use((req, res, next) => {
   console.log(`📦 [GLOBAL LOGGER] ${req.method} ${req.originalUrl}`);
@@ -24,7 +24,4 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/goldPrice', goldPriceRoutes);
 app.use('/api/auth', authRoutes);
-app.get('/socket-test', (req, res) => {
-  res.send('🟢 Socket backend đang chạy');
-});
 export default app; 
